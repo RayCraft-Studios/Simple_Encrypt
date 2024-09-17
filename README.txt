@@ -8,6 +8,7 @@ Usage:
 Example of Using EncryptManager
 The EncryptManager class handles key generation, key exchange, and message encryption/decryption.
 
+	```csharp
    	//Code Example
    	using SimpleEncrypt;
 
