@@ -10,7 +10,7 @@ public class EncryptManager
     public EncryptManager(int keyLenght) {
         encrypt = new Encrypter();
         hellman = new Hellman(keyLenght);
-        PrivateKey = hellman.initPrivateKey(encrypt.GetLetters());
+        PrivateKey = hellman.initPrivateKey();
         PublicKey = hellman.generatePublicKey(PrivateKey, encrypt.GetLetters());
     }
     public string GetPublicKey() { return PublicKey; }
@@ -22,16 +22,16 @@ public class EncryptManager
     {
         if (!string.IsNullOrEmpty(message) && !string.IsNullOrEmpty(SharedKey))
         {
-            return encrypt.encodeKey(message, SharedKey).ToString();
+            return new string(encrypt.encodeKey(message, SharedKey));
         }
-        else { return "Invalid or empty entrys"; }
+        else { return message; }
     }
     public string DecryptMessage(string message)
     {
         if (!string.IsNullOrEmpty(message) && !string.IsNullOrEmpty(SharedKey))
         {
-            return encrypt.decodeKey(message, SharedKey).ToString();
+            return new string(encrypt.decodeKey(message, SharedKey));
         }
-        else { return "Invalid or empty entrys"; } 
+        else { return message; } 
     }
 }

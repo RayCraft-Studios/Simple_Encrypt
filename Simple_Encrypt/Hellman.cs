@@ -18,7 +18,7 @@ namespace SimpleEncrypt
             KeyLenght = keyLenght;
         }
 
-        public int[] initPrivateKey(char[] alphabet)
+        public int[] initPrivateKey()
         {
             int[] key = new int[KeyLenght];
 
