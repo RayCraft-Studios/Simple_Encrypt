@@ -16,11 +16,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("This is a simple open source encryption and decryption tool that works with Diffi" +
     "e Hellman\'s asynchronous key exchange system.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e8ea5644e8468d10cd8ac68101f682ea7bdd28b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Simple_Encrypt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Simple_Encrypt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/mein-repo")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/RayCraft-Studios/Simple_Encrypt")]
 
 // Von der MSBuild WriteCodeFragment-Klasse generiert.
 

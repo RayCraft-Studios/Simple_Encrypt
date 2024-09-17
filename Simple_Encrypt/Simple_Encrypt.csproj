@@ -1,18 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-	<PackageId>Simple Encrypt</PackageId>
+	<PackageId>SimpleEncrypt</PackageId>
 	<Version>1.0.0</Version>
 	<Authors>IRay</Authors>
 	<Company>RayCraft Studios</Company>
 	<Description>This is a simple open source encryption and decryption tool that works with Diffie Hellman's asynchronous key exchange system.</Description>
 	<PackageTags>Encyption;Decryption</PackageTags>
-	<RepositoryUrl>https://github.com/mein-repo</RepositoryUrl>
+	<RepositoryUrl>https://github.com/RayCraft-Studios/Simple_Encrypt</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
