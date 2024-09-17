@@ -8,35 +8,34 @@ Usage:
 Example of Using EncryptManager
 The EncryptManager class handles key generation, key exchange, and message encryption/decryption.
 
-	```csharp
-   	//Code Example
-   	using SimpleEncrypt;
+**Exanple**:
+```csharp
+using SimpleEncrypt;
+class Program
+{
+	static void Main(string[] args)
+        {
+        	// Create two instances of EncryptManager (e.g., for two communication partners)
+                EncryptManager encrypt = new EncryptManager(1024); // Key length
 
-   	class Program
-   	{
-   		static void Main(string[] args)
-        	{
-        		// Create two instances of EncryptManager (e.g., for two communication partners)
-                	EncryptManager encrypt = new EncryptManager(1024); // Key length
+                // User1 sends their public key to User2 and vice versa
+                string publicKey= encrypt.GetPublicKey();
+                string publicKeyUser2; //Implement a function to get the public key of user 2 e.g with TcpClient 
 
-                	// User1 sends their public key to User2 and vice versa
-                	string publicKey= encrypt.GetPublicKey();
-                	string publicKeyUser2; //Implement a function to get the public key of user 2 e.g with TcpClient 
+        	// Initialize the shared key on both sides
+        	encrypt.InitSharedKey(publicKeyUser2);
 
-        		// Initialize the shared key on both sides
-        		encrypt.InitSharedKey(publicKeyUser2);
+        	// Encrypt a message (from User1 to User2)
+        	string message = "Secret message";
+        	string encryptedMessage = encrypt.EncryptMessage(message);
+        	Console.WriteLine($"Encrypted Message: {encryptedMessage}");
 
-        		// Encrypt a message (from User1 to User2)
-        		string message = "Secret message";
-        		string encryptedMessage = encrypt.EncryptMessage(message);
-        		Console.WriteLine($"Encrypted Message: {encryptedMessage}");
+        	// Decrypt the message (on User2's side)
+        	string decryptedMessage = encrypt.DecryptMessage(encryptedMessage);
+        	Console.WriteLine($"Decrypted Message: {decryptedMessage}");
+    	}
+}
 
-        		// Decrypt the message (on User2's side)
-        		string decryptedMessage = encrypt.DecryptMessage(encryptedMessage);
-        		Console.WriteLine($"Decrypted Message: {decryptedMessage}");
-    		}
-	}
-	//End of example
 
 Key Features
 EncryptManager(int keyLength): Initializes the key generator with the specified key length (e.g., 1024 as Array Length ).
