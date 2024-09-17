@@ -39,11 +39,11 @@ class Program
 ```
 
 ## Key Features:
-> EncryptManager(int keyLength): Initializes the key generator with the specified key length (e.g., 1024 as Array Length ).
-> GetPublicKey(): Retrieves the public key that can be shared with the communication partner.
-> InitSharedKey(string partnerPublicKey): Initializes the shared key using the partner's public key.
-> EncryptMessage(string message): Encrypts a message using the shared key.
-> DecryptMessage(string message): Decrypts a received message using the shared key.
+- EncryptManager(int keyLength): Initializes the key generator with the specified key length (e.g., 1024 as Array Length ).
+- GetPublicKey(): Retrieves the public key that can be shared with the communication partner.
+- InitSharedKey(string partnerPublicKey): Initializes the shared key using the partner's public key.
+- EncryptMessage(string message): Encrypts a message using the shared key.
+- DecryptMessage(string message): Decrypts a received message using the shared key.
 
 ## Key Exchange and Message Encryption Example
 Two parties (e.g., user1 and user2) generate their own private and public keys.
