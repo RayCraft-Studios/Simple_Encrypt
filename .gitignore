@@ -3,7 +3,9 @@
 .idea/
 *.suo
 *.user
+*.bat
 
 # Build results
 bin/
 obj/
+
