@@ -17,11 +17,15 @@ class Program
 	static void Main(string[] args)
         {
         	// Create two instances of EncryptManager (e.g., for two communication partners)
-                EncryptManager encrypt = new EncryptManager(1024); // Key length
+                EncryptManager encrypt = new EncryptManager(1024); // Key length in charakters
 
                 // User1 sends their public key to User2 and vice versa
                 string publicKey= encrypt.GetPublicKey();
-                string publicKeyUser2; //Implement a function to get the public key of user 2 e.g with TcpClient 
+
+		//Implement a function to get the public key of user 2 e.g with TcpClient
+		//In this Example we just create a new EncryptManager to Simulate a second user
+		EncryptManager user2 = new EncryptManager(1024);
+		string publicKeyUser2 = user2.GetPublicKey(); 
 
         	// Initialize the shared key on both sides
         	encrypt.InitSharedKey(publicKeyUser2);
