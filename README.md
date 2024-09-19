@@ -8,7 +8,7 @@ To integrate SimpleEncrypt into your project, you can install the NuGet package 
 ### Example of Using EncryptManager
 The EncryptManager class handles key generation, key exchange, and message encryption/decryption.
 
-**Exanple**:
+**Example**:
 
 ```csharp
 using SimpleEncrypt;
